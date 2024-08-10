@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="myfuns.js"></script>
+        <script>
+            function f1(){
+                document.write("we can have script in head also and execution will be in sequential manner<p>js developer has a thumb rule that what ever script tag we put in head should be a function and we call this funtion in body script tag</p> ");
+            }
+            
+            </script>
+    </head>
+    
+        <h1>welcome to javascript</h1>
+        <script>
+            document.write("<h3>hello js!</h3>")
+            //<p>this is para inside script it is error and it will be ignored but we can see it in developer tool</p>
+            
+            //alert("hello world this is alert method to display popup message")
+
+            console.log("hello world this is console in console window.log this output is seen in console (ctrl shift i)")
+        </script>
+
+        <script>document.write("we can have multiple script tag")
+        </script>
+        <script>
+            document.write("<p>we are now calling f1 function in body sectio script tag</p>")
+            f1()
+            greet() //this greet() method is in external .js file
+        </script>
+
+        <p>we cannot put html tag in script tag</p>
+        <p>this is para iafter script</p>
+        <p>press control shift i to open developer tool in browser</p>
+    </body>
+</html>

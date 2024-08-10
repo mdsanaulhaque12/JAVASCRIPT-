@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var d1= new Date();
+            console.log(d1)//current system date and time
+
+            //1 jan 1970 before this date is not valid in js 
+
+            console.log(d1.getDate())//10
+            console.log(d1.getDay())//6   // here if sunday  sundayreturn --> 0   saturday ---> 6
+            console.log(d1.getMonth())//7   //january --0  feb--1 december --11
+            console.log(d1.getFullYear())//2024
+            console.log(d1.getHours())
+            console.log(d1.getMinutes())
+            var timemilisecond=d1.getTime()
+
+            var timemilisecond2= Date.now();
+
+            d1.setFullYear(2025)
+            d1.setMonth(11)
+            d1.setDate(25)
+            console.log(d1)
+
+            
+            var d2= new Date(timemilisecond);//passing millisecond
+            console.log(d2)
+
+            var d3= new Date(timemilisecond2)
+
+            console.log(d3)
+
+            
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //function expression
+            //lhs=rhs
+            var a=100; 
+            var b="hello"
+            var c=a/10*0.1+100 
+            //c is a variable in lhs whose is assigned with the value of expression in rhs
+
+            function greet(){
+                console.log("hello");
+            }
+            greet();//calling greet is a '' named function''' - its  afunction with a name 
+
+            //function expression
+            var greet1 = function(){ //anonymous function
+                console.log("hello function expression");
+            }
+            //greet 1 in lhs is a variable which has function expression(anonymous function)  on rhs
+            greet1();//calling function expression
+
+
+            function greetUser(username){
+                console.log("hello",username)
+            }
+            greetUser("shivam")
+
+            var greetUser1=function(username){
+                console.log("hello",username)
+            }
+            greetUser1("sanaul")
+
+            var add =function(x,y){
+                return x+y;
+            }
+            console.log(add(2,4))
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
