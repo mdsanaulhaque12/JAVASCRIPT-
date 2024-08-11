@@ -1,0 +1,63 @@
+<html>
+    <head></head>
+    <body>
+        <h1>array</h1>
+        <script>
+            //in javascript we dont of to specify size ..we can put any number of element and any type of element in array
+
+            var arr = new Array()//old way to create array
+
+            arr [0]= null;
+            arr[1]=20;
+            arr[2]=30;
+            arr[5]=new Date()
+            arr[6]= function(){}
+            arr[7]=54.3
+            arr[8]=true
+            arr[100]="string";
+
+            console.log(arr.length);//Array object has a single property length
+
+            console.log(arr[4])//undefined
+            console.log(typeof(arr[5]))
+            console.log(typeof(arr[6]))
+
+            console.log(arr)
+
+
+            //-----------------iterate through an array
+            //traditional for loop
+            for(i=0 ;i<arr.length;i++){
+                console.log(arr[i])
+            }
+
+            //es6 feature  -->for in  loop
+
+            for(element in arr){
+                console.log(element)//displaying index position
+            }
+
+            //for of loop
+            for(element of arr){
+                console.log(element)//displaying element 
+                            }
+        </script>
+        <script>
+            //another way to create array
+
+            var arr1= [1,2,3,4,5]
+
+            for(i of arr1){
+                console.log(i)
+            }
+
+            var sum=0;
+            for(i of arr1){
+                sum+=i;
+            }
+            console.log(sum)
+
+            console.log(typeof(arr1))
+        </script>
+    </body>
+</html>

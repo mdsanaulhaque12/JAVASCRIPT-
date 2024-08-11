@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    <script>
+        var i=100
+        i+=10
+        console.log(i)
+
+        const k=100
+        // j+=10
+        //TypeError: Assignment to constant variable.
+        console.log(k)
+
+        {
+            //this is block
+            //within this block lets create a variable 
+            var a=10
+            {
+                var b=20
+                {
+                   var c=30 
+                }
+            }
+            console.log(a,b,c) //will display 10 20 30 we are able to access data because of variable hoisting 
+
+        }
+
+        {
+            var i=10;
+            {
+                let j=20
+            }
+            //console.log(i,j)
+            //cannot access let varible because let will make a variable local to the scope 
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>user defined object using class es6 feature</h1>
+        <script>
+            class greeter{
+                display(){//cannot use function keyword to create function here
+                    console.log("hello world")
+                }
+            }
+            var g1 = new greeter();
+            g1.display()
+            
+            function greet(){
+                    //named function
+            }
+
+            class Student{
+                // sname;
+                // sid; no need to write this
+
+                constructor(sid,sname){
+                    this.sid=sid;
+                    this.sname=sname;
+                }
+
+                displaydetails(){
+                    console.log(this.sid,this.sname);
+                }
+
+            }
+
+        var s1 = new Student(1,"sanaul haque")
+        s1.displaydetails();
+
+        var s2= new Student(2,"sname")
+        s2.displaydetails()
+
+        </script>
+            <h1>java script does support constructor overloading,<br>java script support inheritance  </h1>
+        <script>
+            class GradStud extends Student{
+                constructor(sid,sname,gpa){
+                    super(sid,sname);
+                    this.gpa=gpa;
+                }
+
+                displaydetails(){
+                    super.displaydetails()
+                    console.log("gpa: ",this.gpa)
+                }
+            }
+
+            var gstd=new GradStud(23,"sanaul",9.01)
+           //gstd.displaydetails()
+
+
+            // to list properties of object initializer
+            var GStd={
+                sid:1000,
+                sname:"sana"
+            }
+
+            for( prop in GStd){
+                console.log(prop,GStd[prop])
+            }
+
+             //storing json object in an array;
+             var Person=[
+                {spid:1,pname:"saba"},
+                {spid:2,pname:"sandaba"},
+                {spid:3,pname:"sahiba"},
+                {spid:4,pname:"sana"},
+
+             ]
+
+             for(Element of Person){
+                console.log(Element)
+             }
+             for(Element in Person){
+                console.log(Person[Element].pname)
+             }
+
+             //printing details in html
+
+             var str= " <table border ='1'>";
+                for(person of Person){
+                str+="<tr><td>"+person.spid+"</td><td>"+person.pname+"</td></tr>"
+             }
+             str+="</table>"
+
+             document.write(str)
+        </script>
+    </body>
+</html>

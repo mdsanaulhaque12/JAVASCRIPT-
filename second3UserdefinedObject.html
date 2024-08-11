@@ -1,0 +1,79 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    <script>
+        //object initializers is similar to json
+        //object initializer -a way to create object
+        
+        var studObj={
+            prn:12345,
+            sname:"aditi",
+            age:21,
+            grade:"A",
+            course:"DAC",
+            
+
+        };
+        //every java script expose mrthods and property
+        console.log(studObj.age)
+        console.log(studObj.course)
+        console.log(studObj.grade)
+        console.log(studObj.prn)
+        console.log(studObj.sname)
+        studObj.sname="sanaul" //writing to the property
+        console.log(studObj.sname)
+
+        var book1 ={
+            bookid:1,
+            bookname:"java",
+            bookprice:1000
+        };
+        console.log(book1.bookid) //reading the property
+        console.log(book1.bookname)
+        console.log(book1.bookprice)
+        
+        var person={
+             pname:"sanaul",//string
+             age:21,//Number
+             vaccinated:true,//boolean
+             hobbies:['making music','reading'],//arrayobject
+             address:{city:'ratnagiri',state:'maha'} //object
+
+        };
+        console.log(person.pname,person.age,person.vaccinated)
+        console.log(person.hobbies[0])
+        console.log(person.hobbies[1])
+
+        console.log(person.address.state)
+        
+
+
+        //adding methods in object initializers
+
+        var book ={
+            //properties
+            id:1001,
+            bname:'javascript',
+            author:'sanaul',
+            price:500,
+
+            //methods
+            incrPrice:function(amount){
+                this.price=this.price+amount;
+            },
+            dispdetail:function(){
+                console.log(this.id,this.author,this.bname,this.price)
+            }
+        };
+        book.dispdetail();
+        //json proper example-key maust be in double quotes
+        var emp={
+            "empid":1,
+            "empname":"sanaul",
+            "empaddress":{"city":"pune","street":12}
+        };
+    </script>
+    </body>
+</html>
