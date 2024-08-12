@@ -1,0 +1,29 @@
+<html>
+    <head>
+<script>
+    var i=0
+    function greet(){
+        document.write("hello user ",i)
+        i++
+    }
+    function g(){
+        document.write("hello g")
+    }
+</script>
+    </head>
+    <body>
+        <script>
+            
+                        
+            setTimeout(g,3000);
+            
+            
+            let j=window.setInterval(greet,2000)
+
+            //after 7 second set interval greet function will be stopped
+            window.setTimeout(function(){clearInterval(j)},7000)
+
+
+        </script>
+    </body>
+</html>

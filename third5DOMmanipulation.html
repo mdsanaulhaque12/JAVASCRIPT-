@@ -1,0 +1,29 @@
+<html>
+    <head> 
+        <script>
+            function add(){
+                var num1=parseInt(document.getElementById("number1").value)
+
+                var num2=parseInt( document.getElementById("number2").value)
+
+                //document.write("addition = "+(num1+num2))
+                
+                document.getElementById("d1").innerHTML="area: "+ num1+num2
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form >
+            input number 1: <input type="text" id="number1"><br>
+
+            input number 2 : <input type="text" id="number2">
+
+            <input type="button"
+                   value="add number"
+                    onclick="add()"
+            ><br>
+            <div id ="d1"></div>
+        </form>
+    </body>
+</html>
