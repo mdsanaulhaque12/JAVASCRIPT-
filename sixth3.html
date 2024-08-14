@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <style>
+        @keyframes textColorChange {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: rgb(125, 98, 181);
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        /* Apply animation */
+        .animate {
+            animation: textColorChange 2s infinite;
+        }
+    </style>
+
+    <script>
+        function validateName() {
+            var un = document.getElementById("uname").value
+            var element = document.getElementById("nameerror")
+            if (un.length < 5 || un.length > 10) {
+               
+                element.innerHTML = "input uname between 5 -10 character"
+                element.style.color = "red"
+                element.classList.add("animate"); // Apply animation class
+                return false;
+            }
+            else element.innerHTML = ""
+            return true
+
+        }
+        function validatePass() {
+
+            var pass = document.getElementById("pass").value
+            var element = document.getElementById("paserror")
+            if (pass.length < 7 || pass.length > 15) {
+                element.style.color = "red";
+                element.innerHTML = "input password between 7 - 15 character"
+                return false;
+            }
+            else element.innerHTML = ""
+            return true
+        }
+
+        function validate() {
+            return validateName() && validatePass()
+        }
+
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        username : <input type="text" id="uname" required><br>
+        <span id="nameerror"></span><br>
+        password : <input type="password" id="pass" required><br>
+        <span id="paserror"></span><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
