@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            function valSelected(){
+                var radio=document.getElementsByName("coffee")
+                var selected=""
+                for (let index = 0; index < radio.length; index++) {
+                    if(radio[index].checked==true){
+                        var selected=radio[index].value
+                    }
+                    
+                }
+                document.getElementById("s1").innerHTML=selected
+            }
+        </script>
+    </head>
+    <body>
+        <form name="selectForm">
+            <b>which music type do u like</b>
+            <input type="checkbox" class="c1" id ="c1" value="blues">blue
+            <input type="checkbox" class="c1" id ="c2" value="classical">classical
+            <input type="checkbox" class="c1" id ="c3" value="opera">opera
+
+            <b>choose coffee to go with</b>
+            <input type="radio" name="coffee" id="coffee" value="cappuchino">cappuchino
+            <input type="radio" name="coffee" id="coffee" value="lstte">latte
+            <input type="radio" name="coffee" id="coffee" value="mocha">mocha
+            <input type="button" value="submit" onClick="valSelected()"><br>
+
+            <span id="s1"></span>
+
+
+
+        </form>
+    </body>
+</html>

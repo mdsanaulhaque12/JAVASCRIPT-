@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function valselect1(){
+                var select=document.getElementById("musicTypes");
+                // alert(select.value)//print value
+                var opt=select.options[select.selectedIndex];
+                alert(opt.text)
+            }
+
+            function valselect2(){
+                var select =document.getElementById("musicTypes")
+                var opt
+                for(i=0;i<select.options.length;i++){
+                    opt=select.options[i]
+                    if(opt.selected==true){break}
+                }
+                alert(opt.value)
+            }
+        </script>
+    </head>
+    <body>
+        <form name="selectForm">
+            <select name="musicTypes" id="musicTypes">
+                <option value="mb" selected>R&b</option>
+                <option value="jazz" >jazz</option>
+                <option value="blues" >blues</option>
+            </select>
+            <input type="button" value="value selected?" onclick="valselect1()">
+            <input type="button" value="value selected using loop?" onclick="valselect2()">
+        </form>
+    </body>
+</html>

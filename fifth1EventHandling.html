@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            function f1(){
+                document.getElementById("p1").innerHTML="change text"
+            }
+            function changecolor(){
+               var p= document.getElementById("p1")
+               p.style.color="pink"
+               p.style.backgroundColor="blue"
+               p.style.border="1px"
+               p.style.borderRadius="6px"
+            }
+            function revertcolor(){
+               var p= document.getElementById("p1")
+               p.style.color="black"
+               p.style.backgroundColor="grey"
+               p.style.border="1px"
+               p.style.borderRadius="6px"
+            }
+        </script>
+    </head>
+    <body>
+        <h1 >header 1</h1>
+        <p onclick="f1()"
+             id="p1"
+             onmouseover="changecolor()"
+             onmouseout="revertcolor()"
+             >para1 hover mouse to see change </p>
+        <p >para2</p>
+        <p >para3</p>
+        <p>para4</p>
+
+        
+        <!-- <input type="button" value="button" 
+        onclick="f1()"> -->
+
+    </body>
+</html>
