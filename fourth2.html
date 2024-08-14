@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            function changeallP(){
+              var plist= document.getElementsByTagName("p")
+
+            //   for(let i=0;i<plist.length;i++){
+            //     plist[i].innerHTML="sanaul"
+            //   }
+
+            for(para of plist){
+                para.innerHTML="new content "
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>header 1</h1>
+        <p>para1</p>
+        <p id="p2">para2</p>
+        <p>para3</p>
+        <p>para4</p>
+
+        <input type="button" value="changeALL"
+        onclick="changeallP()">
+
+    </body>
+</html>

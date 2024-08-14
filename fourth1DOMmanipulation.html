@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function changecontent(){
+                var i = document.getElementById("p2").innerHTML
+                window.alert("content of p2"+i)
+                document.getElementById("p2").innerHTML="new content"
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>header 1</h1>
+        <p>para1</p>
+        <p id="p2">para2</p>
+        <p>para3</p>
+        <p>para4</p>
+
+        <input type="button" value="change"
+        onclick="changecontent()">
+
+    </body>
+</html>

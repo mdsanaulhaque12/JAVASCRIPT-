@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function changeallP(){
+              var plist= document.getElementsByClassName("c1")
+                var hlist=document.getElementsByClassName("h1")
+            for(para of plist){
+                para.innerHTML="new content "
+                
+            }
+            for (element of hlist) {
+                element.style.color="blue"
+                element.style.backgroundColor="red"
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 class="h1">header 1</h1>
+        <p class="c1">para1</p>
+        <p id="p2">para2</p>
+        <p class="c1">para3</p>
+        <p>para4</p>
+
+        <input type="button" value="changeALLwithsameclass"
+        onclick="changeallP()">
+
+    </body>
+</html>
