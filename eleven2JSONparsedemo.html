@@ -1,0 +1,24 @@
+<!--Serializing Objects
+
+Serialization is the process of converting an object's state to a string, which can later be restored.
+
+Use Cases:
+
+Sometimes, we receive a raw JSON string, and we need to convert it into an object.
+When we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending.
+Key Methods:
+
+parse(): Accepts a JSON string as a parameter and returns the corresponding JavaScript object.
+stringify(): Accepts an object as a parameter and returns the equivalent JSON string.
+Example:
+
+-->
+<html><body>
+    <script>
+        let o = {x: 1, y: {z: [false, null, ""]}}; // Define a test object
+    let s = JSON.stringify(o); // s is '{"x":1,"y":{"z":[false,null,""]}}'
+    let p = JSON.parse(s); // p is a deep copy of o
+    console.log(p.x); // 1
+    </script>
+</body></html>
+
