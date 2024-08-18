@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function checkCode(){
+                var re5digit=/^\d{5}$/ 
+                //regular expression defining a 5 digit number 
+                var str= document.getElementById("code");
+                if(re5digit.test(str.value)==false){
+                    window.alert("please enter only a valid  5 digit number")
+                    str.focus()
+                }else{
+                    window.alert("correct")
+                }
+                
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <input type="text" id="code" size="15" autofocus>(enter only 5 digit code )<br>
+            product : <input type="text" name="product" pattern="[0-9][A-Z]{3}" title="single digit followed by uppercase letters">
+            <input type="submit" onclick="checkCode()" value="check">
+
+        </form>
+    </body>
+</html>
