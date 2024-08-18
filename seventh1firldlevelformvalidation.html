@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script>
+        function validateName() {
+            var un = document.getElementById("uname")
+            var element = document.getElementById("s1")
+            if (un.value.length < 5 || un.value.length > 10) {
+
+                element.innerHTML = "input uname between 5 -10 character"
+                element.style.color = "red"
+                un.focus()
+            }
+            
+            else element.innerHTML = ""
+
+        }
+        function validatePass() {
+
+            var pass = document.getElementById("pass")
+            var element = document.getElementById("s2")
+            if (pass.value.length < 7 || pass.value.length > 15) {
+                element.style.color = "red";
+                element.innerHTML = "input password between 7 - 15 character"
+                pass.focus()
+            }
+            else element.innerHTML=""
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <form>
+        username : <input type="text"
+                          id="uname"
+                          required
+                          autofocus
+                          onchange="validateName()"><br>
+        <span id="s1"></span><br>
+        password : <input type="password"
+                          id="pass"
+                          required
+                          
+                          onchange="validatePass()"><br>
+        <span id="s2"></span><br>
+
+        <input type="button" value="button">
+    </form>
+</body>
+
+</html>
