@@ -1,0 +1,50 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            let str = "hello world welcome"
+            let re =/ll/
+
+            console.log(str.search(re))
+
+            let re1=/q/
+            console.log(str.search(re1))//-1 end of string search unsuccessful
+
+            //--> \d numeral find single digit 0 through 9
+            //--> /\d\d\d/ matches "212" but not "B23"
+
+
+            /*
+             --> \D non numeral  find any non digit
+             /\D\D\D/ matches "ABC" but not 212
+
+
+             --> \s single white space 
+             /over\sbite/ matches "over bite" but not "over    bite" or "overbite"
+
+            --> \S single non white spaces 
+            /over\Sbite/ matches "overbite" but not "over bite"
+
+            --> \w letter ,numeral(digit),or underscore ,
+
+            /ab\w/ matches  "aba" or "ab1" or "ab_" but not matces "ab+"
+
+            -->\W not letter ,numeral ,underscore
+            /A\W/ matches "A+" but not "A1" or "AA"
+
+            -->"." any character except newline:
+            /.../ matches "abc" ,"AB1" ,"A1b","A+1","a b" or any three character possible
+
+            -->[...] character set : any character in the specified character ser 
+            /[An]bc/ matches "Abc","nbc"
+
+
+            -->[^...] neglected character set : any character not in the character set
+            /[^an]bc/  matches "cbc" ,"dbc","ebc" but not matches "abc" or "nbc"
+            
+            
+              */
+        </script>
+    </body>
+</html>
