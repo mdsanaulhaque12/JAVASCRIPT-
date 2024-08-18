@@ -1,0 +1,69 @@
+<html>
+    <head>
+<script>
+    function greet(){
+        console.log("greet")
+    }
+
+    //function expression
+    var greet1 =function(){
+        console.log("greet 1 function expression")
+    }
+
+
+    // in java we have  learnt thin arrow --> that is lambda 
+    //here in js we will learn fat arrow that is es6 feature 
+
+    //lambda==== fat arrow function
+    var greet2= ()=>console.log("hello from greet2 fat arrow function lmbda")
+    
+
+    // fat arrow with parameters 
+    var greetuser2 = (uname)=>console.log("hello",uname)
+
+    
+    var add=function(x,y){
+        return x+y
+    }
+
+    var add1 =(x,y)=>x+y
+
+    var add2 =(x,y)=>{
+        return x+y
+    }
+
+    //named function
+    function strOps(str){
+        console.log(str.length);
+        // console.log(str.concat("hello"))
+        console.log(str.toUpperCase())
+    }
+
+    //function expression
+    var strOPs1=function(str){
+        console.log(str.length);
+        // console.log(str.concat("hello"))
+        console.log(str.toUpperCase())
+    }
+
+    //fat arrow
+
+    var strOps2=(str)=>{
+        console.log(str.length);
+        console.log(str.toUpperCase())
+        return  console.log(str.concat("hello"))
+    }
+
+    setInterval(()=>console.log("hello lambda in set interval"),20000)
+
+</script>
+    </head>
+    <body>
+        <script>
+            greet2();
+            greetuser2("sanaul");
+            strOps("sanaulllll")
+            strOPs1("saba")
+        </script>
+    </body>
+</html>
